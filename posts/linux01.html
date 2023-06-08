@@ -1,0 +1,1165 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Linux | Wzh的纸箱🧊</title><meta name="keywords" content="操作系统,Linux"><meta name="author" content="爱学技术的小吴🏵"><meta name="copyright" content="爱学技术的小吴🏵"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="https://w-zx.cc/posts/linux01.html">
+<meta property="og:site_name" content="Wzh的纸箱🧊">
+<meta property="og:description" content="操作系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imgbed.link/file/27065">
+<meta property="article:published_time" content="2023-05-15T10:19:03.000Z">
+<meta property="article:modified_time" content="2023-05-20T14:00:00.000Z">
+<meta property="article:author" content="爱学技术的小吴🏵">
+<meta property="article:tag" content="操作系统">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgbed.link/file/27065"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://w-zx.cc/posts/linux01"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-20 22:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><link rel="stylesheet" href="https://npm.elemecdn.com/ethan4116-blog/lib/css/plane_v2.css"><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Wzh的纸箱🧊" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/26921" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 回忆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wzh的纸箱🧊</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 回忆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">Linux</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-05-15T10:19:03.000Z" title="发表于 2023-05-15 18:19:03">2023-05-15</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-20T14:00:00.000Z" title="更新于 2023-05-20 22:00:00">2023-05-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">5193</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Linux安装</h1>
+<p>关于安装这里就不过多介绍了，安装版本是<code>CentOS 7</code>，选择<code>最小安装</code>即可</p>
+<h2 id="网卡配置">网卡配置</h2>
+<p>由于启动服务器的时候未加载网卡，所以这里我们要手动修改一下配置文件</p>
+<ul>
+<li>
+<p>进入到对应的目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/sysconfig/network-scripts</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编辑</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifcfg-e<span class="symbol">ns33</span></span><br></pre></td></tr></table></figure>
+<p>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ifcfg-ens33</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>输入<code>i</code>进入编辑</p>
+</li>
+<li>
+<p>修改<code>ONBOOT=yes</code></p>
+</li>
+<li>
+<p>按ESC</p>
+</li>
+<li>
+<p>输入<code>:wq</code>保存并退出</p>
+</li>
+<li>
+<p>输入<code>ip addr</code>，查看到类似下图的ip地址即可<br>
+<a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/634a19f016f2c2beb1a8a501.jpg"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/634a19f016f2c2beb1a8a501.jpg" alt="img"></a></p>
+</li>
+</ul>
+<h2 id="安装SSH连接工具">安装SSH连接工具</h2>
+<ul>
+<li>为啥要安装这个呢？
+<ul>
+<li>因为实际工作的时候，Linux操作系统都是安装在物理机上，而不是像我们现在使用的虚拟机</li>
+<li>所以我们需要SSH连接工具，远程连接到物理机上</li>
+</ul>
+</li>
+<li>这里安装的是<code>FinalShell</code>，具体的安装与连接操作，这里就不过多叙述了</li>
+<li>成功连接之后的效果如图<br>
+<a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/634a1b3516f2c2beb1aa6c8b.jpg"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/634a1b3516f2c2beb1aa6c8b.jpg" alt="img"></a></li>
+</ul>
+<h2 id="Linux的目录结构">Linux的目录结构</h2>
+<p><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/634a234916f2c2beb1b6f85c.jpg"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/634a234916f2c2beb1b6f85c.jpg" alt="img"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">目录</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">/bin</td>
+<td style="text-align:center">存放二进制可执行文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/boot</td>
+<td style="text-align:center">存放系统引导时使用的各种文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/dev</td>
+<td style="text-align:center">存放设备文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/etc</td>
+<td style="text-align:center">存放系统配置文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/home</td>
+<td style="text-align:center">存放系统用户的文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/lib</td>
+<td style="text-align:center">存放程序运行所需的共享库和内核模块</td>
+</tr>
+<tr>
+<td style="text-align:center">/opt</td>
+<td style="text-align:center">额外安装的可选应用程序包所放置的位置</td>
+</tr>
+<tr>
+<td style="text-align:center">/root</td>
+<td style="text-align:center">超级用户目录</td>
+</tr>
+<tr>
+<td style="text-align:center">/sbin</td>
+<td style="text-align:center">存放二进制可执行文件，只有root用户才能访问</td>
+</tr>
+<tr>
+<td style="text-align:center">/tmp</td>
+<td style="text-align:center">存放临时文件</td>
+</tr>
+<tr>
+<td style="text-align:center">/usr</td>
+<td style="text-align:center">存放系统应用程序</td>
+</tr>
+<tr>
+<td style="text-align:center">/var</td>
+<td style="text-align:center">存放运行时需要改变数据的文件，例如日志文件</td>
+</tr>
+</tbody>
+</table>
+<h1>Linux常用命令</h1>
+<h2 id="Linux命令常用技巧">Linux命令常用技巧</h2>
+<ul>
+<li>Tab键自动补全</li>
+<li>连续按两次Tab键，给出操作提示</li>
+<li>使用上下箭头快速调出曾经使用过的命令</li>
+<li>使用Clear命令或者快捷键Ctrl+L实现清屏</li>
+</ul>
+<h2 id="Linux命令格式">Linux命令格式</h2>
+<ul>
+<li>
+<p>Linux命令格式如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> [-options] [parameter]</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>command</code>：命令名</li>
+<li><code>[-options]</code>：选项，可用来对命令进行控制，也可以省略</li>
+<li><code>[parameter]</code>：传给命令的参数，可以是0个，1个或多个</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><code>[]</code>代表可选命令名</li>
+<li>选项，参数之间需要用空格进行分隔</li>
+</ul>
+</li>
+</ul>
+<h2 id="文件目录操作命令">文件目录操作命令</h2>
+<h3 id="ls">ls</h3>
+<ul>
+<li>
+<p>作用：显示指定目录下的内容</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> [-al] [<span class="built_in">dir</span>]</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>-a</code>：显示所有文件及目录（以<code>.</code>开头的隐藏文件也会列出）</li>
+<li><code>-l</code>：除文件名外，还会讲文件的形态、权限、拥有者、文件大小等详细信息列出</li>
+</ul>
+<p>注意：由于我们使用<code>ls</code>命令时，经常会加上<code>-l</code>选项，所以Linux很人性化的为我们提供了<code>ll</code>命令来作为<code>ls -l</code>命令的简写，使用<code>ll -a</code>也可以替代<code>ls -al</code></p>
+</li>
+</ul>
+<h3 id="cd">cd</h3>
+<ul>
+<li>
+<p>作用：用户切换当前工作目录，即进入指定目录</p>
+</li>
+<li>
+<p>语法</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span><span class="meta"> [dirName]</span></span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>~</code>表示用户的home目录</li>
+<li><code>.</code>表示当前所在的目录</li>
+<li><code>..</code>表示当前位置的上级目录</li>
+</ul>
+</li>
+</ul>
+<h3 id="cat">cat</h3>
+<ul>
+<li>
+<p>作用：用于显示文件内容</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> [-n] fileName</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>-n</code>：由1开始对所有输出的行数编号</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>
+<pre><code>cat /etc/profile
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 查看`/etc`目录下的`profile`文件内容</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  cat -n /etc/profile</span><br></pre></td></tr></table></figure>
+
+- 查看`/etc`目录下的`profile`文件内容，显示行号
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="more">more</h3>
+<ul>
+<li>
+<p>作用：以分页的形式显示文件内容</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">more</span> fileName</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li>回车键：向下滚动一行</li>
+<li>空格键：向下滚动一屏</li>
+<li>b：返回上一屏</li>
+<li>q或者Ctrl+C：退出more</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>
+<pre><code>more /etc/profile
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">    -</span> 以分页方式显示<span class="code">`/etc`</span>目录下的<span class="code">`profile`</span>文件内容</span><br><span class="line"></span><br><span class="line"><span class="section">### tail</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 作用：查看文件末尾的内容</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 语法：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<p>tail [-f] fileName</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">- `-f`：动态读取文件末尾内容并显示，通常用于日志文件的内容输出</span><br><span class="line"></span><br><span class="line">举例：</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  tail /etc/profile</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>显示<code>/etc</code>目录下的<code>profile</code>文件末尾10行的内容</p>
+</li>
+<li>
+<pre><code>tail -20 /etc/profile
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 显示`/etc`目录下的`profile`文件末尾<span class="number">20</span>行的内容</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  tail -f /kyle/blog.log</span><br></pre></td></tr></table></figure>
+
+- 动态读取`/kyle`目录下的`blog.log`文件末尾内容并显示
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="mkdir">mkdir</h3>
+<ul>
+<li>
+<p>作用：创建目录</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir[-p] dirName</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>-p</code>：确保目录名称存在，不存在的就创建一个。通过此选项，可以实现多层目录同时创建</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>
+<pre><code>mkdir linuxCast
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 在当前目录下，建立一个名为linuxCast的子目录</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  mkdir-p linuxCast/test</span><br></pre></td></tr></table></figure>
+
+- 在工作目录下的linuxCast目录中建立一个名为test的子目录，若linuxCast目录不存在，则建立一个
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="rmdir">rmdir</h3>
+<ul>
+<li>
+<p>作用：删除空目录</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir [-p] dirName</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>-p</code>：当子目录被删除后使父目录为空目录的话，则一并删除</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li><code>rmdir linuxCast</code>删除名为linuxCast的空目录</li>
+<li><code>rmdir -p linuxCast/test</code>删除linuxCast目录中名为test的子目录，若test目录删除后linuxCast目录变为空目录，则也被删除</li>
+<li><code>rmdir linuxCast*</code>删除名称以linuxCast开始的空目录</li>
+</ul>
+</li>
+</ul>
+<h3 id="rm">rm</h3>
+<ul>
+<li>
+<p>作用：删除文件或者目录</p>
+</li>
+<li>
+<p>语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> [-rf] name</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li><code>-r</code>：将目录及目录中所有文件（目录）逐一删除，即递归删除</li>
+<li><code>-f</code>：无需确认，直接删除</li>
+<li><code>name</code>：要删除的文件/目录，支持通配符</li>
+</ul>
+</li>
+</ul>
+<h2 id="拷贝移动命令">拷贝移动命令</h2>
+<h3 id="cp">cp</h3>
+<p>作用：用于复制文件或目录<br>
+语法：cp [-r] source dest</p>
+<p>说明：</p>
+<ul>
+<li><code>-r</code>：如果复制的是目录需要使用此选项，此时将复制该目录下所有的子目录和文件</li>
+<li><code>source</code>：要复制的资源（文件/目录）</li>
+<li><code>dest</code>：要移动到的位置</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>
+<pre><code>cp hello.txt linuxCast/
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 将hello.txt复制到linuxCast目录中</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  cp hello.txt ./ hi.txt</span><br></pre></td></tr></table></figure>
+
+- 将hello.txt复制到当前目录，并改名为hi.txt
+
+</code></pre>
+</li>
+<li>
+<p>c</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p -r linuxCast<span class="regexp">/ ./</span>blog/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将linuxCast目录和目录下所有文件复制到blog目录下</li>
+</ul>
+</li>
+<li>
+<pre><code>cp -r linuxCast/* ./blog/
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">  -</span> 将linuxCast目录下所有文件复制blog目录下</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### mv</span></span><br><span class="line"></span><br><span class="line">作用：为文件或目录改名、或将文件或目录移动到其它位置</span><br><span class="line">语法：mv source dest</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="code">`source`</span>：要移动的资源（文件/目录）</span><br><span class="line"><span class="bullet">-</span> <span class="code">`dest`</span>：要移动到的位置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">举例：</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="code">```</span></span><br><span class="line"><span class="code">  mv hello.txt hi.txt</span></span><br></pre></td></tr></table></figure>
+
+- 将hello.txt改名为hi.txt
+
+</code></pre>
+</li>
+<li>
+<pre><code>mv hi.txt blogl
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 将文件hi.txt移动到blog目录中</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  mv hi.txt blog/hello.txt</span><br></pre></td></tr></table></figure>
+
+- 将hi.txt移动到blog目录中，并改名为hello.txt
+
+</code></pre>
+</li>
+<li>
+<pre><code>mv linuxCast/ blogl
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 如果blog目录不存在，将linuxCast目录改名为blog</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  mv linuxCast/ blogl</span><br></pre></td></tr></table></figure>
+
+- 如果blog目录存在，将linuxCast目录移动到blog目录中
+
+
+
+</code></pre>
+</li>
+</ul>
+<h2 id="打包压缩命令">打包压缩命令</h2>
+<h3 id="tar">tar</h3>
+<p>作用：对文件进行打包、解包、压缩、解压<br>
+语法：<code>tar [-zcxvf] fileName [files]</code><br>
+包文件后缀为<code>.tar</code>表示只是完成了打包，并没有压缩<br>
+包文件后缀为<code>.tar.gz</code>表示打包的同时还进行了压缩，也可以用<code>.tgz</code>作为简写</p>
+<p>说明：</p>
+<ul>
+<li><code>-z</code>： 代表的是gzip，通过gzip命令处理文件，gzip可以对文件压缩或者解压</li>
+<li><code>-c</code>： 代表的是create，即创建新的包文件</li>
+<li><code>-x</code>： 代表的是extract，实现从包文件中还原文件</li>
+<li><code>-v</code>： 代表的是verbose，显示命令的执行过程</li>
+<li><code>-f</code>： 代表的是file，用于指定包文件的名称</li>
+<li><code>c</code>和<code>x</code>是互斥的，解压和压缩不能同时进行</li>
+</ul>
+<p>举例 ：</p>
+<ul>
+<li>
+<pre><code>tar -cvf hello.tar ./*
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 将当前目录下所有文件打包，打包后的文件名为hello<span class="selector-class">.tar</span></span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  tar -czvf hello<span class="selector-class">.tar</span><span class="selector-class">.gz</span> .<span class="comment">/*</span></span><br></pre></td></tr></table></figure>
+
+- 将当前目录下所有文件打包并压缩，打包后的文件名为hello.tar.gz
+
+</code></pre>
+</li>
+<li>
+<pre><code>tar -zxvf hello.tar.gz
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 将`hello.tar.gz`中的文件解压缩</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 文本编辑命令</span><br><span class="line"></span><br><span class="line">### vi</span><br><span class="line"></span><br><span class="line">作用：`vi`命令是`Linux`系统提供的一个文本编辑工具，可以对文件内容进行编辑，类似于`windows`中的记事本</span><br><span class="line">语法：`vi fileName`</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. `vim`是从`vi`发展来的一个功能更加强大的文本编辑工具，在编辑文件时可以对文本内容进行着色，方便我们对文件进行编辑处理，所以实际工作中`vim`更加常用。</span><br><span class="line"><span class="number">2</span>. 要使用`vim`命令，需要我们自己完成安装。可以使用下面的命令来完成安装：`yum install vim`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### vim</span><br><span class="line"></span><br><span class="line">作用：对文件内容进行编辑，vim其实就是一个文本编辑器</span><br><span class="line">语法：`vim fileName`</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 在使用vim命令编辑文件时，如果指定的文件存在则直接打开此文件。如果指定的文件不存在则新建文件。</span><br><span class="line"><span class="number">2</span>. vim在进行文本编辑时共分为三种模式，分别是`命令模式`（Command mode），`插入模式`（Insert mode）和`底行模式`（Last line mode）。这三种模式之间可以相互切换。我们在使用vim时一定要注意我们当前所处的是哪种模式。</span><br><span class="line"></span><br><span class="line">针对vim中的三种模式说明如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 命令模式</span><br><span class="line">   命令模式下可以查看文件内容、移动光标（上下左右箭头、`gg`(开头)、`G`（末尾））</span><br><span class="line">   通过vim命令打开文件后，默认进入命令模式</span><br><span class="line">   另外两种模式需要首先进入命令模式，才能进入彼此</span><br><span class="line"><span class="number">2</span>. 插入模式</span><br><span class="line">   插入模式下可以对文件内容进行编辑</span><br><span class="line">   在命令模式下按下[i,a,o]任意一个，可以进入插入模式。进入插入模式后，下方会出现`INSERT`字样</span><br><span class="line">   在插入模式下按下ESC键，回到命令模式</span><br><span class="line"><span class="number">3</span>. 底行模式</span><br><span class="line">   底行模式下可以通过命令对文件内容进行查找、显示行号、退出等操作</span><br><span class="line"><span class="title">   在命令模式下按下[:</span>,/]任意一个，可以进入底行模式</span><br><span class="line">   通过 `/` 方式进入底行模式后，可以对文件内容进行查找</span><br><span class="line"><span class="title">   通过 `:</span>` 方式进入底行模式后，可以输入`wq`（保存并退出）、`q！`（不保存退出）、`set nu`（显示行号）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 查找命令</span><br><span class="line"></span><br><span class="line">### find</span><br><span class="line"></span><br><span class="line">作用：在指定目录下查找文件</span><br><span class="line">语法：`find dirName -option fileName`</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">- `dirName`：指定目录</span><br><span class="line">- `-option`：一般指定`-name`（根据文件名称来查找）</span><br><span class="line">- `fileName`：可以使用通配符的方式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">举例：</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  find / -name helloworld.log</span><br></pre></td></tr></table></figure>
+
+- 在所有文件夹下查找helloworld.log文件
+
+</code></pre>
+</li>
+<li>
+<pre><code>find . -name &quot;*.java&quot;
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 在当前目录及其子目录下查找.java结尾文件</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  find /linuxCast -name <span class="string">&quot;*.java&quot;</span></span><br></pre></td></tr></table></figure>
+
+- 在/linuxCast目录及其子目录下查找.java结尾的文件
+
+
+
+</code></pre>
+</li>
+</ul>
+<h3 id="grep">grep</h3>
+<p>作用：从指定文件中查找指定的文本内容<br>
+语法：<code>grep word fileName</code></p>
+<p>说明：</p>
+<ul>
+<li><code>word：</code>查找的文本</li>
+<li><code>fileName：</code>从哪个文件中种找</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>
+<pre><code>grep Hello Helloworld.java
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 查找Helloworld.java文件中出现的Hello字符串的位置</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  grep hello *.java</span><br></pre></td></tr></table></figure>
+
+- 查找当前目录中所有.java结尾的文件中包含hello字符串的位置
+
+
+
+</code></pre>
+</li>
+</ul>
+<h1>Linux软件安装</h1>
+<h2 id="软件安装方式">软件安装方式</h2>
+<ol>
+<li>二进制发布包安装
+<ul>
+<li>软件已经针对具体平台编译打包发布，只要解压，修改配置即可</li>
+</ul>
+</li>
+<li>rpm安装
+<ul>
+<li>软件已经按照redhat的包管理规范进行打包，使用rpm命令进行安装，不能自行解决库依赖问题</li>
+</ul>
+</li>
+<li>yum安装
+<ul>
+<li>一种在线软件安装方式，本质上还是rpm安装，自动下载安装包并安装，安装过程中自动解决库依赖问题</li>
+</ul>
+</li>
+<li>源码编译安装
+<ul>
+<li>软件以源码工程的形式发布，需要自己编译打包</li>
+</ul>
+</li>
+</ol>
+<h2 id="安装JDK">安装JDK</h2>
+<p>操作步骤：</p>
+<ol>
+<li>
+<p>使用FinalShell自带的上传工具将jdk的二进制发布包上传到Linux</p>
+</li>
+<li>
+<p>解压安装包，命令为</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-<span class="number">8</span>u171-linux-x64.tar.gz -C <span class="regexp">/usr/</span>local</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这个解压缩命令在前面也说过了，注意将jdk换成你自己的版本，<code>-C /path</code>是解压到指定目录，不过我们自己安装软件的话，一般都放在<code>/usr/local</code>目录下</li>
+</ul>
+</li>
+<li>
+<p>配置环境变量，使用vim命令修改</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
+<p>文件，或者使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span></span><br></pre></td></tr></table></figure>
+<p>追加文件内容，在文件末尾添加如下配置</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">JAVA_HOME</span>=<span class="string">/usr/local/jdk1.8.0_171</span></span><br><span class="line"><span class="attr">PATH</span>=<span class="string">$JAVA_HOME/bin:$PATH</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>追加
+<ul>
+<li><code>echo 'JAVA_HOME=/usr/local/jdk1.8.0_171' &gt;&gt; /etc/profile</code></li>
+<li><code>echo 'PATH=$JAVA_HOME/bin:$PATH' &gt;&gt; /etc/profile</code></li>
+</ul>
+</li>
+<li>查看
+<ul>
+<li><code>tail /etc/profile</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>重新加载profile文件，使更改的配置立即生效</p>
+<ul>
+<li>命令为<code>source /etc/profile</code></li>
+</ul>
+</li>
+<li>
+<p>检查安装是否成功</p>
+<ul>
+<li>命令为<code>java -version</code></li>
+</ul>
+</li>
+<li>
+<p>看到jdk版本号则说明安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost <span class="built_in">local</span>]<span class="comment"># java -version</span></span><br><span class="line">java version <span class="string">&quot;1.8.0_171&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_171-b11)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装Tomcat">安装Tomcat</h2>
+<p>操作步骤：</p>
+<ol>
+<li>
+<p>使用<code>FinalShell</code>自带的上传工具将<code>Tomcat</code>的二进制发布包上传到Linux</p>
+</li>
+<li>
+<p>解压安装包</p>
+<ul>
+<li>命令为<code>tar -zxvf apache-tomcat-7.0.57.tar.gz-C /usr/local</code></li>
+</ul>
+</li>
+<li>
+<p>进入Tomcat的bin目录启动服务，命令为<code>sh startup.sh</code>或者<code>./startup.sh</code></p>
+</li>
+<li>
+<p>验证Tomcat是否启动成功</p>
+<ul>
+<li>
+<p>查看进程</p>
+<ul>
+<li>
+<pre><code>ps -ef | grep tomcat
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```BASH</span><br><span class="line">[root@localhost bin]# ps -ef | <span class="keyword">grep</span> tomcat</span><br><span class="line">root      <span class="number">71967</span>      <span class="number">1</span>  <span class="number">4</span> <span class="number">16</span>:<span class="number">05</span> pts<span class="regexp">/0    00:00:02 /u</span>sr<span class="regexp">/local/</span>jdk1.<span class="number">8.0</span>_171<span class="regexp">/bin/</span>java -Djava.util.logging.config.<span class="keyword">file</span>=<span class="regexp">/usr/</span>local<span class="regexp">/apache-tomcat-7.0.57/</span>conf<span class="regexp">/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.endorsed.dirs=/u</span>sr<span class="regexp">/local/</span>apache-tomcat-<span class="number">7.0</span>.<span class="number">57</span><span class="regexp">/endorsed -classpath /u</span>sr<span class="regexp">/local/</span>apache-tomcat-<span class="number">7.0</span>.<span class="number">57</span><span class="regexp">/bin/</span>bootstrap.jar:<span class="regexp">/usr/</span>local<span class="regexp">/apache-tomcat-7.0.57/</span>bin<span class="regexp">/tomcat-juli.jar -Dcatalina.base=/u</span>sr<span class="regexp">/local/</span>apache-tomcat-<span class="number">7.0</span>.<span class="number">57</span> -Dcatalina.home=<span class="regexp">/usr/</span>local<span class="regexp">/apache-tomcat-7.0.57 -Djava.io.tmpdir=/u</span>sr<span class="regexp">/local/</span>apache-tomcat-<span class="number">7.0</span>.<span class="number">57</span>/temp org.apache.catalina.startup.Bootstrap start</span><br><span class="line">root      <span class="number">73174</span>  <span class="number">42704</span>  <span class="number">0</span> <span class="number">16</span>:<span class="number">06</span> pts/<span class="number">0</span>    <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span> <span class="keyword">grep</span> --color=auto tomcat</span><br></pre></td></tr></table></figure>
+
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>查看日志</p>
+<ul>
+<li><code>more /usr/local/ apache-tomcat-7.0.57/logs/catalina.out</code></li>
+<li><code>tail -50 /usr/local/apache-tomcat-7.0.57/logs/catalina.out</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>停止Tomcat</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="http://xn--Tomcatbinshutdowno-8o22a48i86dlvf23q3j8eloxah3j2kk3yai16gv13ehae206a539jnv9b7s2c.sh">运行Tomcat的bin目录中提供的停止服务的脚本文件shutdowno.sh</a></p>
+<ul>
+<li><code>./shutdown.sh</code></li>
+<li><code>sh shutdown.sh</code></li>
+</ul>
+</li>
+<li>
+<p>结束Tomcat进程</p>
+<ul>
+<li>
+<p><code>kill -9 71967</code></p>
+</li>
+<li>
+<p>注意这里的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">71967</span><br></pre></td></tr></table></figure>
+<p>是Tomcat的</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进程<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
+<p>，是我们上面</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看进程</span><br></pre></td></tr></table></figure>
+<p>查出来的</p>
+<p>虽然Tomcat服务器启动了，但是我们暂时还是无法访问的，因为防火墙是开启的，而且我们也没有开放8080端口，继续往下看</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="防火墙操作">防火墙操作</h2>
+<ul>
+<li>查看防火墙状态
+<ul>
+<li>systemctl status firewalld、 firewall-cmd —state</li>
+</ul>
+</li>
+<li>暂时关闭防火墙
+<ul>
+<li>systemctl stop firewalld</li>
+</ul>
+</li>
+<li>永久关闭防火墙
+<ul>
+<li>systemctl disable firewalld</li>
+</ul>
+</li>
+<li>开启防火墙
+<ul>
+<li>systemctl start firewalld</li>
+</ul>
+</li>
+<li>开放指定端口
+<ul>
+<li>firewall-cmd —zone=public —add-port=8080/tcp —permanent</li>
+</ul>
+</li>
+<li>关闭指定端口
+<ul>
+<li>firewall-cmd —zone=public —remove-port=8080/tcp —permanent</li>
+</ul>
+</li>
+<li>立即生效
+<ul>
+<li>firewall-cmd —reload</li>
+</ul>
+</li>
+<li>查看开放的端口
+<ul>
+<li>firewall-cmd —zone=public —list-ports</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>systemctl是管理Linux中服务的命令，可以对服务进行启动、停止、重启、查看状态等操作</li>
+<li>firewall-cmd是Linux中专门用于控制防火墙的命令</li>
+<li>为了保证系统安全，服务器的防火墙不建议关闭</li>
+</ol>
+<ul>
+<li>
+<p>查看防火墙状态，这里是running的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line">running</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>那我们暂时关闭一下，测试能否访问Tomcat服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line">not running</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>关了之后就能访问了，但是防火墙都没了，不安全<br>
+<a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/item/634a6ddf16f2c2beb1357daf.jpg"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.imgdb.cn/item/634a6ddf16f2c2beb1357daf.jpg" alt="img"></a></p>
+</li>
+<li>
+<p>但是我们可以只开放一个8080端口</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BASH</span><br><span class="line">[root@localhost ~]# firewall-cmd <span class="attribute">--zone</span>=public <span class="attribute">--add-port</span>=8080/tcp --permanent</span><br><span class="line">success</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>并设置立即生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br><span class="line">success</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>刷新页面，尝试访问Tomcat服务器，依旧可以正常访问</p>
+</li>
+</ul>
+<h2 id="安装MySQL">安装MySQL</h2>
+<h3 id="检查冲突">检查冲突</h3>
+<p>检测当前系统中是否安装MySQL数据库</p>
+<ul>
+<li>
+<pre><code>rpm -qa
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 查询当前系统中安装的所有软件</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  rpm -qa | grep mysql</span><br></pre></td></tr></table></figure>
+
+- 查询当前系统中安装的名称带mysql的软件
+
+</code></pre>
+</li>
+<li>
+<pre><code>rpm -qa | grep mariadb
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 查询当前系统中安装的名称带mariadb的软件</span><br><span class="line"></span><br><span class="line">RPM (Red-Hat Package Manager)RPM软件包管理器，是红帽Linux用于管理和安装软件的工具</span><br><span class="line"></span><br><span class="line">如果当前系统中已经安装有MySQL数据库，安装将失败。CentOS7自带mariadb，与MySQL数据库冲突</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 解决冲突</span><br><span class="line"></span><br><span class="line">- 如果发现有</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+mariadb
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  ，那么我们把它卸载掉</span><br><span class="line"></span><br><span class="line">  - `rpm -e --nodeps mariadb-libs<span class="string">-5</span>.5.68<span class="string">-1</span>.el7.x86_64`</span><br><span class="line"></span><br><span class="line">- 然后看一下是不是真的卸掉了</span><br><span class="line"></span><br><span class="line">  - `rpm -qa | grep mariadb`</span><br><span class="line"></span><br><span class="line">### 解压MySQL</span><br><span class="line"></span><br><span class="line">- 先创建要解压到的目录</span><br><span class="line"></span><br><span class="line">  - `mkdir /usr/local/mysql`</span><br><span class="line"></span><br><span class="line">- 随后解压</span><br><span class="line"></span><br><span class="line">  - `tar -zxvf mysql<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm-bundle.tar.gz -C /usr/local/mysql`</span><br><span class="line"></span><br><span class="line">- 按顺序安装rpm包</span><br><span class="line"></span><br><span class="line">  ```BASH</span><br><span class="line">  rpm -ivh mysql-community-common<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br><span class="line">  rpm -ivh mysql-community-libs<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br><span class="line">  rpm -ivh mysql-community-devel<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br><span class="line">  rpm -ivh mysql-community-libs-compat<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br><span class="line">  rpm -ivh mysql-community-client<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br><span class="line">  yum install net-tools</span><br><span class="line">  rpm -ivh mysql-community-server<span class="string">-5</span>.7.25<span class="string">-1</span>.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+</code></pre>
+</li>
+</ul>
+<h3 id="启动MySQL">启动MySQL</h3>
+<ul>
+<li>
+<p>查看MySQL服务状态</p>
+<ul>
+<li><code>systemctl status mysqld</code></li>
+</ul>
+</li>
+<li>
+<p>启动MySQL服务</p>
+<ul>
+<li><code>system start mysqld</code></li>
+</ul>
+</li>
+<li>
+<p>查看已经启动的服务</p>
+<ul>
+<li><code>netstat -tunlp</code></li>
+<li><code>netstat -tunlp | grep mysql</code></li>
+</ul>
+</li>
+<li>
+<p>查看MySQL进程</p>
+<ul>
+<li>
+<pre><code>ps -df | grep mysql
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    说明：</span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="string">可以设置开机时自动启动MySQL服务，避免每次开机都要启动MySQL</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">`systemctl enable mysqld`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 登录MySQL</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">查看日志内容中包含password的行信息</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">`cat /var/log/mysqld.log |grep &#x27;A temporary password is generated&#x27;`</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">根据查询到的密码来登录MySQL</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">`mysql -uroot -p`</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">登录成功之后修改密码</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">设置密码长度最低位数</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">`set global validate_password_length=4;`</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">设置密码安全等级低，便于密码可修改为root</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">`set global validate_password_policy=LOW;`</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">设置密码为root</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">`set password = password(&#x27;root&#x27;);`</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">开启访问权限</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">`grant all on *.* to &#x27;root&#x27;@&#x27;%&#x27; identified by &#x27;root&#x27;;`</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">刷新权限</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">`flush privileges;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 外部连接</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">使用Navicat或者SQLyog就可以连接到我们的数据库了，主机名就是ip地址，用户名和密码就是刚刚设置的</span></span><br><span class="line"></span><br><span class="line">如果在查看`MySQL服务状态`时出现了问题，请查看3306端口是否被占用（我找了俩小时才发现原因，呜呜呜）</span><br><span class="line"></span><br><span class="line"><span class="comment">## 安装 lrzsz</span></span><br><span class="line"></span><br><span class="line">操作步骤</span><br><span class="line"></span><br><span class="line">1. 搜索lrzsz安装包</span><br><span class="line">   <span class="bullet">-</span> <span class="string">yum list lrzsz</span></span><br><span class="line">2. 使用yum命令在线安装</span><br><span class="line">   <span class="bullet">-</span> <span class="string">yum install lrzsz.x86_64</span></span><br><span class="line"></span><br><span class="line">Yum(全称为Yellow dog Updater, Modified)是一个在Fedora和RedHat以及Cent05中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">安装完后输入 `rz` ，就会跳出一个窗口，选择文件后即可上传</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 项目部署</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 手动部署</span></span><br><span class="line"></span><br><span class="line">操作步骤</span><br><span class="line"></span><br><span class="line">1. 在IDEA上将项目打包成jar包</span><br><span class="line"></span><br><span class="line">   <span class="bullet">-</span> <span class="string">通过IDEA自带的Maven面板的package指令打包即可</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">打完的包会放在target目录下</span></span><br><span class="line"></span><br><span class="line">2. 将jar包上传到linux服务器</span><br><span class="line"></span><br><span class="line">   <span class="bullet">-</span> <span class="string">最好还是创建一个对应的目录</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">mkdir `/usr/local/app`</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">cd `/usr/local/app`</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">然后使用`rz`命令上传打包好的jar包</span></span><br><span class="line"></span><br><span class="line">3. 启动项目</span><br><span class="line"></span><br><span class="line">   <span class="bullet">-</span> <span class="string">`java -jar [打包好的jar包名]`</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">我这里试着上传了前面做的瑞吉外卖的项目</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">`java -jar reggie-0.0.1-SNAPSHOT.jar`</span></span><br><span class="line"></span><br><span class="line">4. 检查防火墙</span><br><span class="line"></span><br><span class="line">   <span class="bullet">-</span> <span class="string">确保</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ 8080
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">和</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ 3306
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="code">     端口是开放的</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">     -</span> <span class="code">`firewall-cmd --zone=public --list-ports`</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">5.</span> 测试</span><br><span class="line"></span><br><span class="line"><span class="bullet">   -</span> 在浏览器访问<span class="code">`ip:端口/路径`</span></span><br><span class="line"></span><br><span class="line">[<span class="string">![img</span>](<span class="link">https://pic1.imgdb.cn/item/634b61bc16f2c2beb18d3547.jpg</span>)](<span class="link">https://pic1.imgdb.cn/item/634b61bc16f2c2beb18d3547.jpg</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">## 通过Shell脚本自动部署</span></span><br><span class="line"></span><br><span class="line">操作步骤</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 在Linux安装Git</span><br><span class="line"></span><br><span class="line"><span class="bullet">   -</span> 列出git安装包</span><br><span class="line"></span><br><span class="line"><span class="bullet">     -</span> yum list git</span><br><span class="line"></span><br><span class="line"><span class="bullet">   -</span> 在线安装git</span><br><span class="line"></span><br><span class="line"><span class="bullet">     -</span> yum install git</span><br><span class="line"></span><br><span class="line"><span class="bullet">   -</span> 使用git克隆代码（在此之前随便编写一个boot项目，然后push到仓库里，controller层写一个GetMapping，随便写个方法返回字符串</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ Shell脚本部署测试
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="code">     ，方便我们启动服务器的时候查看）</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">     -</span> git clone [仓库地址]</span><br><span class="line"></span><br><span class="line"><span class="bullet">2.</span> 在Linux安装Maven</span><br><span class="line"></span><br><span class="line"><span class="bullet">   -</span> 切换到</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ /usr/local
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  目录</span><br><span class="line"></span><br><span class="line"><span class="bullet">  -</span> cd <span class="code">`/usr/local`</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 上传maven的安装包</span><br><span class="line"></span><br><span class="line"><span class="bullet">  -</span> 使用<span class="code">`rz`</span>命令</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 解压到当前位置</span><br><span class="line"></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`tar zxvf apache-maven-3.5.4-bin.tar.gz`</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 编辑配置文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ /etc/profile
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - `vim /etc/profile`</span><br><span class="line"></span><br><span class="line">  - 加入以下两行配置</span><br><span class="line"></span><br><span class="line">    &gt; <span class="built_in">export</span> MAVEN_HOME=/usr/local/apache-maven-3.5.4</span><br><span class="line">    &gt; <span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line">- 编辑maven的</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+ settings.xml
+ <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 创建目录</span><br><span class="line"></span><br><span class="line">  - `mkdir <span class="regexp">/usr/</span>local/repo`</span><br><span class="line"></span><br><span class="line">- 进入到对应目录修改文件</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    cd <span class="regexp">/usr/</span>local<span class="regexp">/apache-maven-3.5.4/</span>conf</span><br></pre></td></tr></table></figure>
+
+     - `vim settings.xml`
+
+     - 在
+
+       <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">settings</span></span><br></pre></td></tr></table></figure>
+
+       标签下加上这句话设置仓库位置
+
+       &gt; `&lt;localRepository&gt;/usr/local/repo&lt;/localRepository&gt;`
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>编写Shell脚本（拉取代码、编译、打包、启动）</p>
+<p>这部分暂时不需要我们自己写，体验一下用Shell脚本部署就好了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line">echo =================================</span><br><span class="line">echo  自动化部署脚本启动</span><br><span class="line">echo =================================</span><br><span class="line"> </span><br><span class="line">echo 停止原来运行中的工程</span><br><span class="line">APP_NAME=helloworld</span><br><span class="line"> </span><br><span class="line">tpid=`ps -ef|grep $APP_NAME|grep -v grep|grep -v kill|awk &#x27;&#123;print $2&#125;&#x27;`</span><br><span class="line">if [ $&#123;tpid&#125; ]; then</span><br><span class="line">    echo &#x27;Stop Process...&#x27;</span><br><span class="line">    kill -15 $tpid</span><br><span class="line">fi</span><br><span class="line">sleep 2</span><br><span class="line">tpid=`ps -ef|grep $APP_NAME|grep -v grep|grep -v kill|awk &#x27;&#123;print $2&#125;&#x27;`</span><br><span class="line">if [ $&#123;tpid&#125; ]; then</span><br><span class="line">    echo &#x27;Kill Process!&#x27;</span><br><span class="line">    kill -9 $tpid</span><br><span class="line">else</span><br><span class="line">    echo &#x27;Stop Success!&#x27;</span><br><span class="line">fi</span><br><span class="line"> </span><br><span class="line">echo 准备从Git仓库拉取最新代码</span><br><span class="line">cd /usr/local/HelloWorld</span><br><span class="line"> </span><br><span class="line">echo 开始从Git仓库拉取最新代码</span><br><span class="line">git pull</span><br><span class="line">echo 代码拉取完成</span><br><span class="line"> </span><br><span class="line">echo 开始打包</span><br><span class="line">output=`mvn clean package -Dmaven.test.skip=true`</span><br><span class="line"> </span><br><span class="line">cd target</span><br><span class="line"> </span><br><span class="line">echo 启动项目</span><br><span class="line">nohup java -jar HelloWorld-1.0-SNAPSHOT.jar &amp;&gt; helloworld.log &amp;</span><br><span class="line">echo 项目启动完成</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>为用户授予执行Shell脚本的权限</p>
+<ul>
+<li>7表示rwx三个权限都有，现在我们把权限都给了方便测试
+<ul>
+<li><code>chmod 777 bootStart.sh</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>执行Shell脚本</p>
+<ul>
+<li><code>./bootStart.sh</code></li>
+</ul>
+</li>
+<li>
+<p>设置静态ip（可选）</p>
+<ul>
+<li>
+<p>首先进入到对应目录</p>
+<ul>
+<li><code>cd /etc/sysconfig/network-scripts/</code></li>
+</ul>
+</li>
+<li>
+<p>然后编辑</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifcfg-e<span class="symbol">ns33</span></span><br></pre></td></tr></table></figure>
+<p>文件</p>
+<ul>
+<li>
+<p><code>vim ifcfg-ens33</code></p>
+</li>
+<li>
+<p>修改添加以下内容（改成你自己的子网IP）</p>
+<blockquote>
+<p>BOOTPROTO=static<br>
+IPADDR=192.168.28.100<br>
+NETMASK=255.255.255.0<br>
+NM_CONTROLLED=no</p>
+<p>DNS1=8.8.8.8<br>
+DNS2=8.8.4.4</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>重启网络服务</p>
+<ul>
+<li><code>systemctl restart network</code></li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>Linux</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://w-zx.cc/posts/linux01.html">https://w-zx.cc/posts/linux01.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>爱学技术的小吴🏵</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2023-05-15</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-05-20</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>操作系统</a><a class="post-meta__tags" href="/tags/Linux/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>Linux</a></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://i.postimg.cc/1tmk8v0k/QQ-20230520160616.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.postimg.cc/1tmk8v0k/QQ-20230520160616.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://i.postimg.cc/3JkHjbM7/QQ-20230520160610.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.postimg.cc/3JkHjbM7/QQ-20230520160610.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/springboot01.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27056" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SpringBoot</div></div></a></div><div class="next-post pull-right"><a href="/posts/redis01.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27067" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Redis入门</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Linux安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE"><span class="toc-text">网卡配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85SSH%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7"><span class="toc-text">安装SSH连接工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text">Linux的目录结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-text">Linux命令常用技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-text">Linux命令格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-text">文件目录操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-text">ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-text">cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more"><span class="toc-text">more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rmdir"><span class="toc-text">rmdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-text">rm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E7%A7%BB%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">拷贝移动命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-text">cp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="toc-text">打包压缩命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">tar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-text">grep</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Linux软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-text">软件安装方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Tomcat"><span class="toc-text">安装Tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E6%93%8D%E4%BD%9C"><span class="toc-text">防火墙操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85MySQL"><span class="toc-text">安装MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E5%86%B2%E7%AA%81"><span class="toc-text">检查冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8MySQL"><span class="toc-text">启动MySQL</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/60e5d4e39da7c077.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2023</b></span><span><b>&nbsp;&nbsp;By 爱学技术的小吴🏵</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'qRHraBhVfBon4UW97vUo6c6k-gzGzoHsz',
+      appKey: 'KcuRFd21A85bofYWkqw7bO5M',
+      placeholder: '',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      master: ''.split(','),
+      friends: ''.split(','),
+      tagMeta: '博主,小伙伴,访客'.split(','),
+      metaPlaceholder: {},
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.4.18/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-fluttering-ribbon.min.js"></script><script src="//code.tidio.co/s6lf1eubpeuqxvderp74uj8qlp7dx0qc.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/算法/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍡 算法学习笔记 (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/C/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍉 C++笔记 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/MyBatis/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍨 MyBatis笔记 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/MySql/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 MySql笔记 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/JVM/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍃 JVM笔记 (4)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/SpringBoot/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍑 SpringBoot笔记 (4)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/SpringCloud/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🥭 SpringCloud笔记 (4)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/SSM/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍃 SSM笔记 (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/Redis/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍂 Redis笔记 (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://w-zx.cc/categories/JavaWeb/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍁 JavaWeb笔记 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://w-zx.cc/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/f4ff8066a7ba7ab5adc730e776aadbc3.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/结构/&quot;);" href="javascript:void(0);">结构</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">计算机知识的学习</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/f38fc3400758385eff9bf77265ca2509.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/C/&quot;);" href="javascript:void(0);">C++</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr">C++</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/a8436f6a4af0bec512f29f9a8c71d86d.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/SpringCloud/&quot;);" href="javascript:void(0);">SpringCloud</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">SpringCloud</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/c562fbb36709afc81f1068deacea08fd.md.png);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/JAVA/&quot;);" href="javascript:void(0);">JAVA</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr">JAVA</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/0fd95029a75de05623edc2512e94b0b8.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/JVM/&quot;);" href="javascript:void(0);">JVM</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">JVM</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/8e17d3ab324aecc1164680e55d2b316e.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/JavaWeb/&quot;);" href="javascript:void(0);">JavaWeb</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr">JavaWeb</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/6675847a2f316263e92d7cacb5fee143.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/Redis/&quot;);" href="javascript:void(0);">Redis</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">Redis</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/0b571a5a0b0e91f4289ddeb7fe643f66.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/MyBatis/&quot;);" href="javascript:void(0);">MyBatis</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">MyBatis</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/987d0ff1c8f1f402cc76df347b79f660.md.png);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/MySql/&quot;);" href="javascript:void(0);">MySql</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">MySql</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/96a9486dfa9f0d06b9dd3aae8bca1c1d.md.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/SSM/&quot;);" href="javascript:void(0);">SSM</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">SSM</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/168c6a1a28074990a9919f48dc0b9abd.md.png);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/SpringBoot/&quot;);" href="javascript:void(0);">SpringBoot</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">SpringBoot</span></li><li class="categoryBar-list-item" style="background:url(https://img.gejiba.com/images/3df36772603dcb3ec71392a2ed49543e.md.png);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/算法/&quot;);" href="javascript:void(0);">算法</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">算法</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/shujuku02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27062" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-23</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/shujuku02.html&quot;);" href="javascript:void(0);" alt="">MYSQL</a><div class="blog-slider__text">数据库的基础学习</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/shujuku02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/shujuku01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-23</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/shujuku01.html&quot;);" href="javascript:void(0);" alt="">MYSQL</a><div class="blog-slider__text">数据库的基础学习</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/shujuku01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/sjms01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/sjms01.html&quot;);" href="javascript:void(0);" alt="">设计模式</a><div class="blog-slider__text">了解每个模式开发的使用环境</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/sjms01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javaShuJu.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27056" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javaShuJu.html&quot;);" href="javascript:void(0);" alt="">Java数据结构</a><div class="blog-slider__text">了解结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javaShuJu.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/own01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27056" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/own01.html&quot;);" href="javascript:void(0);" alt="">个人学习路线</a><div class="blog-slider__text">自己的学习方向以及个人一些感悟</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/own01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javawl.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27050" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javawl.html&quot;);" href="javascript:void(0);" alt="">Java网络编程</a><div class="blog-slider__text">JAVA进阶模块,了解网络</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javawl.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ES01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27063" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ES01.html&quot;);" href="javascript:void(0);" alt="">ElasticSearch</a><div class="blog-slider__text">搜素引擎，具备非常强大的功能，可以帮助我们从海量数据中快速找到需要的内容</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ES01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/MQ01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27056" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/MQ01.html&quot;);" href="javascript:void(0);" alt="">MeassagerQueue</a><div class="blog-slider__text">消息队列，字面意思就是存放消息的队列，也就是事件驱动中的Broker</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/MQ01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ruiji01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27067" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ruiji01.html&quot;);" href="javascript:void(0);" alt="">瑞吉外卖</a><div class="blog-slider__text">SpringBoot项目</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ruiji01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ruiji02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27058" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ruiji02.html&quot;);" href="javascript:void(0);" alt="">瑞吉外卖优化</a><div class="blog-slider__text">SpringBoot项目</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ruiji02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/redis03.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27050" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/redis03.html&quot;);" href="javascript:void(0);" alt="">Redis高级</a><div class="blog-slider__text">一个基于内存的`key-value`结构数据库</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/redis03.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/springcloud01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27058" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/springcloud01.html&quot;);" href="javascript:void(0);" alt="">SpringCloud</a><div class="blog-slider__text">指定一套行之有效的标准来约数分布式架构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/springcloud01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ssm01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27069" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ssm01.html&quot;);" href="javascript:void(0);" alt="">ssm整合</a><div class="blog-slider__text">三个框架整合在一起，来完成我们的业务功能开发</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ssm01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/springboot01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27056" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-16</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/springboot01.html&quot;);" href="javascript:void(0);" alt="">SpringBoot</a><div class="blog-slider__text">基于SpringBoot的完成SSM整合项目开发</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/springboot01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/git01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27060" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/git01.html&quot;);" href="javascript:void(0);" alt="">Git</a><div class="blog-slider__text">分布式版本控制工具，主要用于管理开发过程中的源代码文件</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/git01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/jdbc01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27067" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-16</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/jdbc01.html&quot;);" href="javascript:void(0);" alt="">JDBC</a><div class="blog-slider__text">数据库连接池,掌握数据库的使用</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/jdbc01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/redis02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27055" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/redis02.html&quot;);" href="javascript:void(0);" alt="">Redis基础</a><div class="blog-slider__text">一个基于内存的`key-value`结构数据库</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/redis02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/maven01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27068" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/maven01.html&quot;);" href="javascript:void(0);" alt="">Maven</a><div class="blog-slider__text">仓库的使用, 项目的优化处理, 分模块开发</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/maven01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/redis01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27067" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/redis01.html&quot;);" href="javascript:void(0);" alt="">Redis入门</a><div class="blog-slider__text">一个基于内存的`key-value`结构数据库</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/redis01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/linux01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/linux01.html&quot;);" href="javascript:void(0);" alt="">Linux</a><div class="blog-slider__text">操作系统</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/linux01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/doceker01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27050" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/doceker01.html&quot;);" href="javascript:void(0);" alt="">Docker</a><div class="blog-slider__text">决大型项目依赖关系复杂，不同组件依赖的兼容性问题</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/doceker01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/SpringBootds.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27059" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-07</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/SpringBootds.html&quot;);" href="javascript:void(0);" alt="">SpringBoot电商项目</a><div class="blog-slider__text">了解SpringBoot+Mybatis等的结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/SpringBootds.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/SpringMVC01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27062" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-07</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/SpringMVC01.html&quot;);" href="javascript:void(0);" alt="">SpringMVC</a><div class="blog-slider__text">SSM中的MVC基本使用</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/SpringMVC01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/C02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27068" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/C02.html&quot;);" href="javascript:void(0);" alt="">C++高级</a><div class="blog-slider__text">C++深入的研究</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/C02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/MyBatis01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27068" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/MyBatis01.html&quot;);" href="javascript:void(0);" alt="">MyBatis</a><div class="blog-slider__text">数据库Value-keys的基本使用</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/MyBatis01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/MyBatis02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27057" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/MyBatis02.html&quot;);" href="javascript:void(0);" alt="">MyBatis - Plus</a><div class="blog-slider__text">MyBatis的加强版本</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/MyBatis02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/C04.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27055" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/C04.html&quot;);" href="javascript:void(0);" alt="">C++进阶使用</a><div class="blog-slider__text">C++的使用</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/C04.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/C05.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27062" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/C05.html&quot;);" href="javascript:void(0);" alt="">C++通讯管理项目</a><div class="blog-slider__text">C++的使用</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/C05.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/C07.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/C07.html&quot;);" href="javascript:void(0);" alt="">C++职工系统项目</a><div class="blog-slider__text">C++职工系统项目, 更好的了解面向对象的知识</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/C07.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/C01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27069" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/C01.html&quot;);" href="javascript:void(0);" alt="">C++入门</a><div class="blog-slider__text">了解C++的基本语法和使用方法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/C01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/SFzhdl.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27069" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-03</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/SFzhdl.html&quot;);" href="javascript:void(0);" alt="">栈和队列</a><div class="blog-slider__text">算法结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/SFzhdl.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javaWeb03.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27057" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javaWeb03.html&quot;);" href="javascript:void(0);" alt="">JavaWab(三)</a><div class="blog-slider__text">正式的开启软件的大门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javaWeb03.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javaWeb02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-27</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javaWeb02.html&quot;);" href="javascript:void(0);" alt="">JavaWab(二)</a><div class="blog-slider__text">正式的开启软件的大门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javaWeb02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/SFecs.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27068" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-01</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/SFecs.html&quot;);" href="javascript:void(0);" alt="">二叉树</a><div class="blog-slider__text">算法结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/SFecs.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/SFhs.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27064" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-02</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/SFhs.html&quot;);" href="javascript:void(0);" alt="">回溯</a><div class="blog-slider__text">算法结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/SFhs.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javaWeb04.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-29</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javaWeb04.html&quot;);" href="javascript:void(0);" alt="">JavaWab(四)</a><div class="blog-slider__text">正式的开启软件的大门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javaWeb04.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/JVM04.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27059" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-07</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/JVM04.html&quot;);" href="javascript:void(0);" alt="">JVM类加载</a><div class="blog-slider__text">JAVA中类的加载过程</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/JVM04.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javaWeb01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27069" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javaWeb01.html&quot;);" href="javascript:void(0);" alt="">JavaWab(一)</a><div class="blog-slider__text">正式的开启软件的大门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javaWeb01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/JVM03.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27057" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-06</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/JVM03.html&quot;);" href="javascript:void(0);" alt="">JVM垃圾回收</a><div class="blog-slider__text">JVM垃圾回收机制</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/JVM03.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/JVM01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27053" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-04</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/JVM01.html&quot;);" href="javascript:void(0);" alt="">JVM导学</a><div class="blog-slider__text">JVM入门导学</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/JVM01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/JVM02.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27059" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/JVM02.html&quot;);" href="javascript:void(0);" alt="">JVM内存结构</a><div class="blog-slider__text">JVM的内存结构</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/JVM02.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/JVM05.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27063" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/JVM05.html&quot;);" href="javascript:void(0);" alt="">JAVA内存模型</a><div class="blog-slider__text">JAVA的内存模型</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/JVM05.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/javadx.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27053" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-15</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/javadx.html&quot;);" href="javascript:void(0);" alt="">Java面向对象</a><div class="blog-slider__text">进行深入学习</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/javadx.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/java.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27064" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-04-14</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/java.html&quot;);" href="javascript:void(0);" alt="">Java</a><div class="blog-slider__text">进行一些基础的学习</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/java.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/Spring01.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.link/file/27065" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-05-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/Spring01.html&quot;);" href="javascript:void(0);" alt="">Spring</a><div class="blog-slider__text">框架的搭建以及一些基本使用方法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/Spring01.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
